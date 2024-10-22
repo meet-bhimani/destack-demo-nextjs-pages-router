@@ -25,13 +25,13 @@ Make sure you have the following installed:
 2. Run the following command to clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+   git clone https://github.com/meet-bhimani/destack-demo-nextjs-pages-router.git
    ```
 
 3. Navigate to the project directory:
 
    ```bash
-   cd your-repo-name
+   cd destack-demo-nextjs-pages-router
    ```
 
 ### Install Dependencies
