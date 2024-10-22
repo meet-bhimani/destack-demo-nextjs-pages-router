@@ -1,40 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Destack Demo Next.js Website
+
+Welcome to the **Destack Demo Next.js Website**! This project demonstrates how to integrate [Destack](https://github.com/LiveDuo/destack) into a Next.js application, providing a user-friendly website builder dashboard. Users can easily switch themes, drag and drop sections, and manage their content seamlessly.
+
+## Features
+
+- **Website Builder Dashboard**: Users can switch between multiple themes and utilize drag-and-drop functionality to add sections such as FAQs, reviews, navigation, footers, forms, and more.
+- **Multiple Pages**: Users can access the dashboard on two different pages: `/` and `/destack-demo`.
+- **Custom Route Creation**: Easily create new routes to access the dashboard.
 
 ## Getting Started
 
-First, run the development server:
+Follow these instructions to set up the project on your local machine.
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14 or higher)
+- [npm](https://www.npmjs.com/get-npm) (comes with Node.js)
+
+### Clone the Repository
+
+1. Open your terminal.
+2. Run the following command to clone the repository:
+
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
+
+3. Navigate to the project directory:
+
+   ```bash
+   cd your-repo-name
+   ```
+
+### Install Dependencies
+
+To install the required dependencies, run:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+ npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Development Server
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+To start the development server, execute:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```bash
+ npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+Once the server is running, open your browser and navigate to http://localhost:3000. You will see the website builder dashboard.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Using the Website Builder
 
-## Learn More
+- On the dashboard, you can switch between different themes.
+- Drag and drop various sections (like FAQ, reviews, navigation, footer, form, etc.) to customize your page.
 
-To learn more about Next.js, take a look at the following resources:
+### Accessing Different Pages
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+You can access the website builder dashboard on the following pages:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **Homepage**: [http://localhost:3000/](http://localhost:3000/)
+- **Demo Page**: [http://localhost:3000/destack-demo](http://localhost:3000/destack-demo)
 
-## Deploy on Vercel
+### Building the application for development:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Run the following command to generate optimized production build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+   ```javascript
+   npm run build
+   ```
+
+2. To run the built application on port 3000, use:
+
+   ```javascript
+   npm start
+   ```
+
+### Creating New Routes
+
+If you want to create a new route to access the dashboard, follow these steps:
+
+1. Create a new file inside the `src/pages` directory. The filename should match the desired route name (e.g., for `/new-route`, create `new-route.tsx`).
+
+2. Paste the following content into the new file:
+
+   ```javascript
+   export { getStaticProps } from "destack/build/server";
+   export { ContentProvider as default } from "destack";
+   ```
+
+3. After creating the new file, build the application by running:
+
+   ```javascript
+   npm run build
+   ```
+
+4. To run the built application on port 3000, use:
+
+   ```javascript
+   npm start
+   ```
+
+### Conclusion
+
+You now have a fully functional Next.js application integrated with Destack. This project provides an intuitive dashboard for managing your website content effortlessly.
+
+## Contributing
+
+If you would like to contribute to this project, feel free to fork the repository and submit a pull request. Any improvements or suggestions are welcome!.
+
+## Acknowledgments
+
+- [Next.js](https://nextjs.org/) for the framework
+- [Destack](https://github.com/LiveDuo/destack) for the content management system
